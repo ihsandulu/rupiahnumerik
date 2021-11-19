@@ -18,4 +18,5 @@ Contoh:
 <script>rupiahnumerik($("#request1_proposed_nom"))</script>
 
 Pembuat Fungsi 'rupiahnumerik': ihsandulu (https://www.qithy.com)
+
 Catatan: Silahkan merubah sourcecode tanpa menghilangkan catatan ini.
