@@ -20,7 +20,7 @@ Contoh:
 
 <input onkeyup="rupiahnumerik(this);" type="number" id="isian" name="isian"\>
 
-<script>rupiahnumerik($("#request1_proposed_nom"))</script>
+<script>rupiahnumerik($("#isian"))</script>
 
 Pembuat Fungsi 'rupiahnumerik': ihsandulu (https://www.qithy.com)
 
