@@ -25,7 +25,7 @@ function rupiahnumerik(a) {
             prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
             sep = (typeof thousands_sep === 'undefined') ? ',' : thousands_sep,
             dec = (typeof dec_point === 'undefined') ? '.' : dec_point,
-            toFixedFix = function(n, prec) {
+            toFixedFix = function (n, prec) {
                 // Fix for IE parseFloat(0.55).toFixed(0) = 0;
                 var k = Math.pow(10, prec);
                 return Math.round(n * k) / k;
@@ -72,7 +72,8 @@ function rupiahnumerik(a) {
         if ($(a).attr('name') == $(a).attr('id')) {
             $(a).after(txt1);
             $(a).attr('name', '');
-            rupiah = number_format(angka, 2, ',', '.')
+            rupiah = number_format(angka, 2, ',', '.');
+            if (angka <= 0) { rupiah = ''; }
             $(a).val(rupiah);
             $("#" + id1).val(angka);
         } else {
