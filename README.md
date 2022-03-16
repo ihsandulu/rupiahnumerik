@@ -14,6 +14,8 @@ Hasil post tetap akan melemparkan angka yg dapat diterima oleh database (yaitu t
 
 Perhatian : Wajib mengisi id pada elemen input.
 
+Perhatian : Type pada database harus text.
+
 Perhatian : Membutuhkan Jquery.
 
 Contoh:
