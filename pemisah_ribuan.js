@@ -18,7 +18,7 @@ Pembuat Fungsi 'rupiahnumerik': ihsandulu (https://www.qithy.com)
 Catatan: Silahkan merubah sourcecode tanpa menghilangkan catatan ini.
 */
 
-function rupiahnumerik(a) {
+/* function rupiahnumerik(a) {
 
     function number_format(number, decimals, dec_point, thousands_sep) {
         var n = !isFinite(+number) ? 0 : +number,
@@ -97,4 +97,55 @@ function rupiahnumerik(a) {
 
     rupiah_numerik(a);
 
+} */
+function rupiah_numerik(a) {
+  var rupiah;
+  var angka = $(a).val();
+  var digitangka = 0;
+  $(a).attr("type", "text");
+  var id1 = $(a).attr("id") + "1";
+  var name = $(a).attr("name");
+  var onchange = $(a).attr("change");
+  var txt1 =
+    '<input type="hidden" id="' +
+    id1 +
+    '" class="' +
+    name +
+    '" name="' +
+    name +
+    '" value="" onchange="' +
+    onchange +
+    '">';
+
+  if ($(a).attr("name") == $(a).attr("id")) {
+    $(a).after(txt1);
+    $(a).attr("name", "");
+    digitangka = numb.toString().split(".")[1].length;
+    rupiah = number_format(angka, digitangka, ",", ".");
+    if (angka <= 0) {
+      rupiah = "";
+    }
+    $(a).val(rupiah);
+    $("#" + id1).val(angka);
+  } else {
+    rupiah = formatRupiah1(angka, "");
+
+    var pecahkoma = rupiah.split(",");
+    var koma;
+    if (pecahkoma.length > 1) {
+      koma = "." + pecahkoma[1];
+    } else {
+      koma = "";
+    }
+    var awal = pecahkoma[0].replace(/\./g, "");
+    var gabung = awal + koma;
+
+    $(a).val(rupiah);
+    $("#" + id1).val(gabung);
+  }
+
+  var onchangex = $("#" + id1).attr("onchange");
+  var valuex = $("#" + id1).val();
+  onchangex = onchangex.replace("this.value", valuex);
+  eval(onchangex);
 }
