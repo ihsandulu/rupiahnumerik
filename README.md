@@ -15,15 +15,22 @@ Hasil post tetap akan melemparkan angka yg dapat diterima oleh database (yaitu t
 PENTING :
 
 1. Wajib mengisi id pada elemen input.
-2. Type pada database harus text.
-3. Membutuhkan Jquery.
-4. Letakkan Event Attribute (baik untuk onchange, onkeyup atau lainnya) di attribute "change".
+2. Id dan name wajib sama penamaannya.
+3. Tambahkan attribut onkeyup pada elemen input : onkeyup="rupiahnumerik(this);"
+4. Tambahkan script : <script>rupiahnumerik($("#idnya"))</script>
+5. Type pada database harus text.
+6. Membutuhkan Jquery.
+7. Letakkan Event Attribute (baik untuk onchange, onkeyup atau lainnya) di attribute "change".
+
+---
 
 Contoh:
 
-<input onkeyup="rupiahnumerik(this);" change="alert();" type="number" id="isian" name="isian"\>
+<input onkeyup="rupiahnumerik(this);" change="alert();" type="number" id="idnya" name="idnya"\>
 
-<script>rupiahnumerik($("#isian"))</script>
+<script>rupiahnumerik($("#idnya"))</script>
+
+---
 
 Pembuat Fungsi 'rupiahnumerik': ihsandulu (https://www.qithy.com)
 
