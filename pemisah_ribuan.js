@@ -142,6 +142,7 @@ function rupiahnumerik(a) {
   function rupiah_numerik(a) {
     var rupiah;
     var angka = $(a).val();
+    angka = angka.replace(/^0+/, "");
     var digitangka = 0;
     $(a).attr("type", "text");
     var id1 = $(a).attr("id") + "1";
