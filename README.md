@@ -34,9 +34,9 @@ Contoh:
 
 Memasukkan Nilai via function lain ke dalam inputan/field:
 
-<select required onchange="isi(); selisih();" class="form-control select" id="product_id" name="product_id">
-    <option value="" disabled>Pilih Produk</option>
-    <option value="3" stok="40">Semen 3 Roda</option>
+'<select required onchange="isi(); selisih();" class="form-control select" id="product_id" name="product_id">
+<option value="" disabled>Pilih Produk</option>
+<option value="3" stok="40">Semen 3 Roda</option>
 </select>
 
 <input onkeyup="rupiahnumerik(this);" change="alert();" type="number" id="idnya" name="idnya"\>
@@ -45,7 +45,7 @@ Memasukkan Nilai via function lain ke dalam inputan/field:
 
 <script><br/>
 
-    $nbsp;function isi(){<br/>
+    function isi(){<br/>
 
         let productid = $("#product_id option:selected");<br/>
 
