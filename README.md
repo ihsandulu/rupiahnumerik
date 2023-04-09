@@ -26,9 +26,12 @@ PENTING :
 
 Contoh:
 
+```
+
 <input onkeyup="rupiahnumerik(this);" change="alert();" type="number" id="idnya" name="idnya"\>
 
 <script>rupiahnumerik($("#idnya"));</script>
+```
 
 ---
 
@@ -43,22 +46,22 @@ Memasukkan Nilai via function lain ke dalam inputan/field:
 
 <input onkeyup="rupiahnumerik(this);" change="alert();" type="number" id="idnya" name="idnya"\>
 
-<script>rupiahnumerik($("#idnya"));</script><br/>
+<script>rupiahnumerik($("#idnya"));</script>
 
-<script><br/>
+<script>
 
-    function isi(){<br/>
+    function isi(){
 
-        let productid = $("#product_id option:selected");<br/>
+        let productid = $("#product_id option:selected");
 
-        let stok = productid.attr("stok");<br/>
+        let stok = productid.attr("stok");
 
-        $("#idnya").val(stok);<br/>
+        $("#idnya").val(stok);
 
-        //tuliskan fungsi rupiahnumerik disini!!!<br/>
+        //tuliskan fungsi rupiahnumerik disini!!!
 
-        rupiahnumerik($("#idnya"));<br/>
-    }<br/>
+        rupiahnumerik($("#idnya"));
+    }
 
 </script>
 ```
