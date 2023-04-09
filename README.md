@@ -26,12 +26,14 @@ PENTING :
 
 Contoh:
 
-```
+`````
 
-<input onkeyup="rupiahnumerik(this);" change="alert();" type="number" id="idnya" name="idnya"\>
+<input onkeyup="rupiahnumerik(this);" change="alert();" type="number" ````
+id="idnya" name="idnya"````
+\>
 
 <script>rupiahnumerik($("#idnya"));</script>
-```
+`````
 
 ---
 
