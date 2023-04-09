@@ -41,22 +41,22 @@ Memasukkan Nilai via function lain ke dalam inputan/field:
 
 <input onkeyup="rupiahnumerik(this);" change="alert();" type="number" id="idnya" name="idnya"\>
 
-<script>rupiahnumerik($("#idnya"));</script>
+<script>rupiahnumerik($("#idnya"));</script><br/>
 
-<script>
+<script><br/>
 
     function isi(){<br/>
 
-        let productid = $("#product_id option:selected");
+        let productid = $("#product_id option:selected");<br/>
 
-        let stok = productid.attr("stok");
+        let stok = productid.attr("stok");<br/>
 
-        $("#idnya").val(stok);
+        $("#idnya").val(stok);<br/>
 
-        //tuliskan fungsi rupiahnumerik disini!!!
+        //tuliskan fungsi rupiahnumerik disini!!!<br/>
 
-        rupiahnumerik($("#idnya"));
-    }
+        rupiahnumerik($("#idnya"));<br/>
+    }<br/>
 
 </script>
 
