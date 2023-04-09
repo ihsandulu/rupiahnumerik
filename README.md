@@ -45,7 +45,7 @@ Memasukkan Nilai via function lain ke dalam inputan/field:
 
 <script><br/>
 
-    function isi(){<br/>
+    $nbsp;function isi(){<br/>
 
         let productid = $("#product_id option:selected");<br/>
 
