@@ -28,7 +28,30 @@ Contoh:
 
 <input onkeyup="rupiahnumerik(this);" change="alert();" type="number" id="idnya" name="idnya"\>
 
-<script>rupiahnumerik($("#idnya"))</script>
+<script>rupiahnumerik($("#idnya"));</script>
+
+---
+
+Memasukkan Nilai via function lain ke dalam inputan/field:
+
+<select required onchange="isi(); selisih();" class="form-control select" id="product_id" name="product_id">
+    <option value="" disabled>Pilih Produk</option>
+    <option value="3" stok="40">Semen 3 Roda</option>
+</select>
+<input onkeyup="rupiahnumerik(this);" change="alert();" type="number" id="idnya" name="idnya"\>
+
+<script>rupiahnumerik($("#idnya"));</script>
+
+<script>
+function isi(){
+    let productid = $("#product_id option:selected");
+    let stok = productid.attr("stok");
+    $("#idnya").val(stok);
+
+    //tuliskan fungsi rupiahnumerik disini!!!
+    rupiahnumerik($("#idnya"));
+}
+</script>
 
 ---
 
