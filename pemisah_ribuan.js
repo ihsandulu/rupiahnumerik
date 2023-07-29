@@ -165,9 +165,10 @@ function rupiahnumerik(a) {
       setTimeout(() => {
         document.getElementById(id1).value = angka;
       }, 500);
-      digitangka = numb.toString().split(".")[1].length;
-      rupiah = number_format(angka, digitangka, ",", ".");
-      if (angka <= 0) {
+      if (typeof angka === 'number' && angka >0) {        
+        digitangka = angka.toString().split(".")[1].length;
+        rupiah = number_format(angka, digitangka, ",", ".");
+      } else {
         rupiah = "";
       }
       $(a).val(rupiah);
